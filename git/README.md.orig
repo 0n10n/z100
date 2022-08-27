@@ -1,0 +1,39 @@
+# git笔记
+
+
+## 一、设置相关
+
+### 1.1 OpenSSL 出错
+```
+fatal: unable to access 'https://github.com/0n10n/foobar/': OpenSSL SSL_read: Connection was reset, errno 10054
+```
+
+需要做的配置：
+
+> git config --global http.sslVerify false  
+> git config --global http.postBuffer 1048576000  
+> git config --global core.compression -1  
+
+## 二、基础原理
+
+### 2.1 基本概念
+
+```mermaid
+graph LR
+A[WorkingTree] --> |Add| B(Index/Staging) --> |Commit| C(Head)
+```
+
+https://www.gitkraken.com/learn/git/git-worktree
+
+https://www.geeksforgeeks.org/git-working-tree/
+
+https://www.kimsereylam.com/git/2021/01/08/difference-between-working-tree-and-index-in-git.html
+
+### 2.2 测试区
+
+这是master分支
+
+
+
+这是在temp worktree 下的修改。
+master 这边也继续修改一下。
