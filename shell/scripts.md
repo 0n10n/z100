@@ -1,0 +1,2 @@
+- change_current.sh： 获取特定目录下，时间最新的目录名， 然后把current链接指向这个最新的目录名
+- pull-repos.sh：查找指定目录下的git仓库，并自动执行每个仓库的git pull
