@@ -50,10 +50,21 @@ filetype on
 filetype plugin on
 filetype indent on
 set number
+set wrap
+set showmatch
+set hlsearch
+set showmode
+set showcmd
+set mouse=a
+set encoding=utf-8
 set cursorline
 set cursorcolumn
+set autoindent expandtab tabstop=2 shiftwidth=2
+color industry
+hi CursorColumn cterm=NONE ctermbg=grey ctermfg=darkblue guibg=grey guifg=darkblue
+
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
 call plug#end()
-colorscheme ron
+
 ```
