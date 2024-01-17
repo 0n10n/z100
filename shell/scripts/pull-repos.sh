@@ -3,7 +3,7 @@
 BASEDIR=/mnt/github
 
 #echo find $BASEDIR -maxdepth 3 -type d -name .git
-GITS=`find /mnt/github -maxdepth 3 -type d -name .git`
+GITS=`find ${BASEDIR} -maxdepth 3 -type d -name .git`
 for dir in $GITS; do
 	repo=${dir:0:-5}
 	pushd .
